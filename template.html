@@ -1,0 +1,38 @@
+
+<div class="concepstore-widgetLocale">
+  <span class="radiohead-test-001">Locale Testing</span>
+  <p data-bind="widgetLocaleText: 'OkComputer'"></p>
+  <p>New Test Widget For Demo Purpose</p>
+  <div style="margin:10%">
+       <div class="form-show">
+      <form id="form" name="myForm" onsubmit="return validateForm()" method="post">
+         
+  <label for="fname">First name:</label><br>
+   <p data-bind="css: { error: fname.hasError }"></p>
+  <input type="text" id="fname" name="fname" data-bind = 'value: fname, valueUpdate: "afterkeydown"'><br>
+  <span data-bind='visible: fname.hasError, text: fname.validationMessage'> </span>
+  <p id="ferror" style="color:red"></p>
+  <p data-bind="css: { error: lname.hasError }"></p>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" data-bind = "value: lname"><br>
+  <span data-bind='visible: lname.hasError, text: lname.validationMessage'> </span>
+  <p id="lerror" style="color:red"></p>
+  <label for="mobile1">Mobile:</label><br>
+  <input type="text" id="mobile1" name="mobile1" data-bind="value: mobile_number"><br>
+ <p id="merror" style="color:red"></p>
+ <label for="email">Email:</label><br>
+  <input type="text" id="email" name="email" data-bind = "value: email_id"><br>
+  <br>
+ 
+</form>
+<p id="message"></p>
+Today's message is: <span data-bind="text: $data.myMessage"></span>
+<p>Your First name is : <span data-bind = "text: fname"></span><br>
+Last name is : <span data-bind = "text: lname"></span><br>
+Mobile Number : <span data-bind = "text: mobile_number"></span><br>
+Email : <span data-bind = "text: email"></span><br>
+</p>
+ </div>
+  </div>
+ 
+</div>
